@@ -1,0 +1,3 @@
+[submodule "bag-of-tricks"]
+	path = bag-of-tricks
+	url = https://github.com/joshuahatcher/bag-of-tricks
