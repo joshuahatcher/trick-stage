@@ -1,4 +1,4 @@
-import tricks from 'bag-of-tricks';
+import tricks from './bag-of-tricks';
 
 function init() {
   document.getElementById('common-header').innerHTML = tricks.header;
