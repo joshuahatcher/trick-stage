@@ -9,7 +9,7 @@ update_submodules() {
 }
 
 while true; do
-  read -p "${BLUE}You are about to commit all updates to this repo's git submodules. \e[31mAre you sure you want to proceed? (y/n)" yn
+  read -p "You are about to commit all updates to this repo's git submodules. Are you sure you want to proceed? (y/n)" yn
   case $yn in
     [Yy]* ) update_submodules; break;;
     [Nn]* ) exit;;
