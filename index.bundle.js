@@ -106,8 +106,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var dateString = new Date().toUTCString().split(' ').slice(0, 4).join(' ');
 
-var header = _header2.default.render({ title: 'Hello! This is a header' });
-var footer = _footer2.default.render({
+var header = (0, _header2.default)({ title: 'Hello! This is a header' });
+var footer = (0, _footer2.default)({
   date: dateString,
   name: 'Joshua Hatcher'
 });
@@ -127,11 +127,11 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = {
-  render: function render(context) {
-    return "<header>" + context.title + "</header>";
-  }
+var Header = function Header(context) {
+  return "<header>" + context.title + " Some change</header>";
 };
+
+exports.default = Header;
 
 /***/ }),
 /* 3 */
@@ -143,11 +143,11 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = {
-  render: function render(context) {
-    return "<footer>Copyright " + context.date + ", " + context.name + "</footer>";
-  }
+var Footer = function Footer(context) {
+  return "<footer>Copyright " + context.date + ", " + context.name + "</footer>";
 };
+
+exports.default = Footer;
 
 /***/ })
 /******/ ]);
