@@ -2,21 +2,14 @@ update_submodules() {
   git submodule update --remote --merge
   git add .
   git commit -m 'Submodule sync'
+  echo "Submodules updated and committed. Run 'git push origin' if you want."
 }
 
-echo "You are about to update all content in this repo's Git submodules. Are you sure you want to proceed?" $1
-
-select yn in "Yes" "No"; do
+while true; do
+  read -p "You are about to commit all updates to this repo's git submodules. Are you sure you want to proceed? (y/n)" yn
   case $yn in
-    Yes ) update_submodules; break;;
-    No ) exit;;
+    [Yy]* ) update_submodules; break;;
+    [Nn]* ) exit;;
+    * ) echo "Please answer yes or no (y/n).";;
   esac
 done
-
-# if [ "$1" = "y" ]; then
-#   git submodule update --remote --merge
-#   git add .
-#   git commit -m 'Submodule sync'
-# else
-#   exit
-# fi

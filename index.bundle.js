@@ -128,7 +128,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var Header = function Header(context) {
-  return "<header>" + context.title + " SUBMODULE CHANGE!!!</header>";
+  return "<header>" + context.title + "</header>";
 };
 
 exports.default = Header;
