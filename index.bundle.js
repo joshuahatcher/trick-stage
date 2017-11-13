@@ -128,7 +128,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var Header = function Header(context) {
-  return "<header>" + context.title + " and my name is Josh</header>";
+  return "<header>" + context.title + "</header>";
 };
 
 exports.default = Header;
