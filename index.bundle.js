@@ -144,7 +144,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var Footer = function Footer(context) {
-  return "<footer>Copyright " + context.date + ", " + context.name + "</footer>";
+  return "<footer>&copy; " + context.date + ", " + context.name + ". All rights reserved.</footer>";
 };
 
 exports.default = Footer;
